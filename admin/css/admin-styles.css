@@ -1,0 +1,28 @@
+/**
+ * Admin-specific CSS for the Genex Alert Banner plugin.
+ *
+ * @since 1.0.0
+ */
+/* Style for the meta box */
+#alert_banner_meta .form-field {
+    margin-bottom: 15px;
+}
+
+#alert_banner_meta label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#alert_banner_meta input[type="text"],
+#alert_banner_meta input[type="datetime-local"],
+#alert_banner_meta select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#alert_banner_meta input[type="checkbox"] {
+    margin-right: 5px;
+}

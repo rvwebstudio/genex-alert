@@ -1,0 +1,139 @@
+/**
+ * Public-facing CSS for the Genex Alert Banner plugin.
+ *
+ * @since 1.0.0
+ */
+
+ #genex-alert-banner {
+    position: fixed;
+    bottom: 0; /* Or bottom: 0; for a bottom banner */
+    left: 0;
+    width: 100%;
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+    padding: 15px;
+    text-align: center;
+    z-index: 9999; /* Ensure it's on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #genex-alert-banner.bottom {
+    top: auto;
+    bottom: 0;
+  }
+  
+  #genex-alert-banner p {
+    margin: 0;
+  }
+  
+  #genex-alert-banner .genex-alert-banner-date{
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+  
+  #genex-alert-banner a {
+    color: #721c24;
+    text-decoration: underline;
+  }
+  
+
+/* Offcanvas styles for Genex Alert Banner */
+
+/* Ensure offcanvas is always on top */
+.genex-offcanvas {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-offcanvas.show {
+  right: 0;
+}
+
+/* Offcanvas Header */
+.genex-offcanvas-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-offcanvas-title {
+  margin: 0;
+  font-size: 1.25rem; /* Slightly larger than default */
+  font-weight: bold;
+  line-height: 1.2; /* Improve readability */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-offcanvas-close {
+  background: none;
+  border: none;
+  font-size: 2rem; /* Make the close button larger */
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Offcanvas Body */
+.genex-offcanvas-body {
+  padding: 15px;
+  overflow-y: auto;
+  flex-grow: 1;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Alert Item */
+.genex-alert-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-alert-item h5 {
+  margin-bottom: 5px;
+  font-size: 1rem; /* Adjust heading size */
+  line-height: 1.2; /* Improve readability */
+  font-weight: bold;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-alert-item p {
+  margin-bottom: 5px;
+  font-size: 0.9rem; /* Slightly smaller than default */
+  line-height: 1.4; /* Improve readability */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.genex-alert-banner-date {
+  font-size: 0.8rem; /* Make the date smaller */
+  color: #666; /* Slightly muted color */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Loader styles */
+.genex-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1051;
+  font-weight: bold;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
