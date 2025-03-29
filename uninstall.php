@@ -10,6 +10,10 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-// Delete any options or custom tables here if needed.
-// For example:
-// delete_option( 'genex_alert_banner_option_name' );
+// Unschedule the banner sync.
+$timestamp = wp_next_scheduled( 'genex_fetch_banners_event' );
+if ( $timestamp ) {
+	wp_unschedule_event( $timestamp, 'genex_fetch_banners_event' );
+}
+// We can add more options here in future.
+
